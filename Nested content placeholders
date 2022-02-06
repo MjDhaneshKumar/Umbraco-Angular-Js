@@ -1,3 +1,13 @@
 
-`bodyText` - is alias.
-{{!!bodyText ? (bodyText | ncRichText | limitTo:100).trim() + '…' : '<Empty Content>'}}
+
+{{!!propalias ? (propalias | ncRichText | limitTo:100).trim() + '…' : '<Empty Content>'}}
+
+---------------------------------------------------------------------------------------------------
+
+Found out there is a 'truncate' filter also available (8.6+), so I'm using it like this:
+<ComponentName>{{!!propalias ? ': ' + (propalias | ncRichText | truncate:true:150) : ''}}
+
+
+-------------------------------------------------------------------------------------------------
+
+{{propalias | ncRichText | truncate:true:100}}
