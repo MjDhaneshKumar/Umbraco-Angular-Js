@@ -1,0 +1,3 @@
+
+`bodyText` - is alias.
+{{!!bodyText ? (bodyText | ncRichText | limitTo:100).trim() + '…' : '<Empty Content>'}}
